@@ -44,4 +44,12 @@ function draw(){
     game.end();
   }
 
+  //for(var i = 0 ; i < player.rank ; i++){
+
+  if(allPlayers !== undefined){
+    text("rank : " + player.rank, displayWidth-100 , displayHeight*2);
+  }
+    //text(i + ":" +  player.name, displayWidth - 100 , i * 10);
+  //}
+
 }

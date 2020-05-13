@@ -48,6 +48,8 @@ class Game {
     form.hide();
 
     Player.getPlayerInfo();
+
+    player.getRank();
     
     if(allPlayers !== undefined){
 
@@ -96,6 +98,10 @@ class Game {
     }
 
     if(player.distance >= 4100){
+      player.rank += 1;
+      
+      Player.updateRank(player.rank);
+
       gameState = 2;
     }
 
@@ -103,8 +109,17 @@ class Game {
   }
 
   end(){
-    console.log("Game Over !!!");
-    game.update(2);
+    console.log(player.rank);
+
+    //player.getRank();
+
+    //for(var i = 0 ; i < player.rank ; i++){
+     // console.log("hi");
+      //text(player.rank,displayWidth-100,10)
+      //text(i + ":" +  player.name, displayWidth - 100 , i * 10);
+    //}
+
+    //game.update(2);
   }
 
 }

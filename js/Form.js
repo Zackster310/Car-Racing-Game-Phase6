@@ -39,6 +39,7 @@ class Form {
     this.reset.mousePressed(()=>{
       game.update(0);
       player.updateCount(0);
+      Player.updateRank(0);
 
      /* for(var i = 0 ; i < allPlayers.length ; i++){
         allPLayers[i].distance = 0;
